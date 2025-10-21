@@ -1,6 +1,6 @@
 package aluracursos.screenmatch.modelos;
 
-public class Peliculas extends Titulo{
+public class Pelicula extends Titulo{
 
     //ATRIBUTOS
     private String director;

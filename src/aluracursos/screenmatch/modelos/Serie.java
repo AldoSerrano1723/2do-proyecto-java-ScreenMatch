@@ -1,6 +1,6 @@
 package aluracursos.screenmatch.modelos;
 
-public class Series extends Titulo{
+public class Serie extends Titulo{
 
     //ATRIBUTOS
     private int temporadas;

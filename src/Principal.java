@@ -1,8 +1,8 @@
-import aluracursos.screenmatch.modelos.Peliculas;
+import aluracursos.screenmatch.modelos.Pelicula;
 
 public class Principal {
     public static void main(String[] args){
-        Peliculas miPelicula = new Peliculas();
+        Pelicula miPelicula = new Pelicula();
         miPelicula.setNombreDePelicula("Encanto");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionMinutos(120);
