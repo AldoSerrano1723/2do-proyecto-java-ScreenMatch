@@ -3,9 +3,10 @@ import aluracursos.screenmatch.modelos.Peliculas;
 public class Principal {
     public static void main(String[] args){
         Peliculas miPelicula = new Peliculas();
-        miPelicula.nombreDePelicula = "Encanto";
-        miPelicula.fechaDeLanzamiento = 2021;
-        miPelicula.duracionMinutos = 120;
+        miPelicula.setNombreDePelicula("Encanto");
+        miPelicula.setFechaDeLanzamiento(2021);
+        miPelicula.setDuracionMinutos(120);
+        miPelicula.setIncluidoEnPlan(false);
 
         miPelicula.muestraFichaTecnica();
         miPelicula.evalua(10);
