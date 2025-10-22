@@ -1,3 +1,4 @@
+import aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import aluracursos.screenmatch.modelos.Pelicula;
 import aluracursos.screenmatch.modelos.Serie;
 
@@ -15,7 +16,7 @@ public class Principal {
         miPelicula.evalua(10);
 
         System.out.println("Lo han calificado " + miPelicula.getTotalDeLasEvalaciones() + " Personas.");
-        System.out.println("La calificacion es: " + miPelicula.calculaMedia() + "\n");
+        System.out.println("La calificacion es: " + miPelicula.calculaMedia());
         System.out.println("----------------------------------------------------------------------------");
 
         Serie casaDragon = new Serie ();
@@ -25,6 +26,12 @@ public class Principal {
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.muestraFichaTecnica();
+        System.out.println("----------------------------------------------------------------------------");
+
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        calculadora.incluye(miPelicula);
+        calculadora.incluye(casaDragon);
+        System.out.println("Te Tomaria " + calculadora.getTimepoTotal() + " minutos ver todo");
 
 
     }
