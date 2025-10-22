@@ -7,6 +7,12 @@ public class Serie extends Titulo{
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
 
+    //METODOS
+    @Override
+    public int getDuracionMinutos() {
+        return temporadas * episodiosPorTemporada * minutosPorEpisodio;
+    }
+
     public int getTemporadas() {
         return temporadas;
     }

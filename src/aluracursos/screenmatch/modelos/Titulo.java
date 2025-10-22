@@ -4,7 +4,7 @@ public class Titulo {
 
     //ATRIBUTOS
 
-    private String nombreDePelicula;
+    private String nombre;
     private int fechaDeLanzamiento;
     private int duracionMinutos;
     private boolean incluidoEnPlan;
@@ -13,8 +13,8 @@ public class Titulo {
 
     //METODOS SET
 
-    public void setNombreDePelicula(String nombreDePelicula) {
-        this.nombreDePelicula = nombreDePelicula;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public void setFechaDeLanzamiento(int fechaDeLanzamiento) {
@@ -35,8 +35,8 @@ public class Titulo {
         return totalDeLasEvalaciones;
     }
 
-    public String getNombreDePelicula() {
-        return nombreDePelicula;
+    public String getNombre() {
+        return nombre;
     }
 
     public int getFechaDeLanzamiento() {
@@ -54,9 +54,9 @@ public class Titulo {
     //METODOS
 
     public void muestraFichaTecnica(){
-        System.out.println("El nombre de la pelicula es: " + nombreDePelicula);
+        System.out.println("El nombre de la pelicula es: " + nombre);
         System.out.println("Su fecha de lanzamiento es: " + fechaDeLanzamiento);
-        System.out.println("Duracion en minutos: " + duracionMinutos);
+        System.out.println("Duracion en minutos: " + getDuracionMinutos());
         System.out.println("Incluido en el plan: " + (incluidoEnPlan ? "Si" : "No"));
     }
 
