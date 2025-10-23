@@ -9,11 +9,11 @@ public class CalculadoraDeTiempo {
 
     //METODOS
     public int getTimepoTotal() {
-        return timepoTotal;
+        return this.timepoTotal;
     }
 
     public void incluye (Titulo titulo){
-        timepoTotal += titulo.getDuracionMinutos();
+        this.timepoTotal += titulo.getDuracionMinutos();
     }
 
 }
