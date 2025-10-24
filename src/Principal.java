@@ -1,4 +1,6 @@
 import aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
+import aluracursos.screenmatch.calculos.FiltroRecomendacion;
+import aluracursos.screenmatch.modelos.Episodio;
 import aluracursos.screenmatch.modelos.Pelicula;
 import aluracursos.screenmatch.modelos.Serie;
 
@@ -33,6 +35,16 @@ public class Principal {
         calculadora.incluye(casaDragon);
         System.out.println("Te Tomaria " + calculadora.getTimepoTotal() + " minutos ver todo");
 
+        System.out.println("----------------------------------------------------------------------------");
+
+        FiltroRecomendacion filtro = new FiltroRecomendacion();
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNombre("La casa Targaryan");
+        episodio.setSerie(casaDragon);
+        episodio.setTotalVisualizaciones(90);
+        filtro.filtra(episodio);
 
     }
 }
