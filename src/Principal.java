@@ -4,10 +4,11 @@ import aluracursos.screenmatch.modelos.Episodio;
 import aluracursos.screenmatch.modelos.Pelicula;
 import aluracursos.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args){
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Encanto");
+        Pelicula miPelicula = new Pelicula("Encanto");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionMinutos(120);
         miPelicula.setIncluidoEnPlan(false);
@@ -45,6 +46,19 @@ public class Principal {
         episodio.setSerie(casaDragon);
         episodio.setTotalVisualizaciones(90);
         filtro.filtra(episodio);
+        System.out.println("----------------------------------------------------------------------------");
+
+        var otraPelicual = new Pelicula("Alien");
+        otraPelicual.setDuracionMinutos(120);
+        otraPelicual.setFechaDeLanzamiento(1979);
+
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(otraPelicual);
+        listaDePeliculas.add(miPelicula);
+
+        System.out.println("El tamaño de la lista es de: " + listaDePeliculas.size());
+        System.out.println("La primer pelicual de la lista es: " + listaDePeliculas.get(0).getNombre());
+        System.out.println(listaDePeliculas);
 
     }
 }

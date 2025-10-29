@@ -7,7 +7,17 @@ public class Pelicula extends Titulo implements Clasificacion {
 //ATRIBUTOS
     private String director;
 
+//CONSTRUCTOR
+    public Pelicula(String nombre) {
+        this.setNombre(nombre);
+    }
+
 //METODOS
+    @Override
+    public String toString() {
+        return "Pelicula: " + this.getNombre() + "(" + this.getFechaDeLanzamiento() + ")";
+    }
+
     @Override
     public int getClasificacion() {
         return (int) (calculaMedia()/2);
