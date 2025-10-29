@@ -11,6 +11,13 @@ public class Titulo {
     private double sumaDeLasEvaluaciones;
     private int totalDeLasEvalaciones;
 
+    //CONSTRUCTOR
+    public Titulo(String nombre, int fechaDeLanzamiento) {
+        this.nombre = nombre;
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+
+
     //METODOS SET
 
     public void setNombre(String nombre) {
