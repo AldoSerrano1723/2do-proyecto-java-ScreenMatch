@@ -13,10 +13,6 @@ public class Pelicula extends Titulo implements Clasificacion {
     }
 
 //METODOS
-    @Override
-    public String toString() {
-        return "Pelicula: " + this.getNombre() + "(" + this.getFechaDeLanzamiento() + ")";
-    }
 
     @Override
     public int getClasificacion() {

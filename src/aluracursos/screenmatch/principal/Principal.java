@@ -1,3 +1,5 @@
+package aluracursos.screenmatch.principal;
+
 import aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import aluracursos.screenmatch.calculos.FiltroRecomendacion;
 import aluracursos.screenmatch.modelos.Episodio;

@@ -59,6 +59,10 @@ public class Titulo {
     }
 
     //METODOS
+    @Override
+    public String toString() {
+        return "Titulo: " + this.getNombre() + "(" + this.getFechaDeLanzamiento() + ")";
+    }
 
     public void muestraFichaTecnica(){
         System.out.println("El nombre de la pelicula es: " + nombre);
