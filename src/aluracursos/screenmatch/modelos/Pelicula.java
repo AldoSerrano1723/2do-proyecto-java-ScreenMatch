@@ -29,5 +29,4 @@ public class Pelicula extends Titulo implements Clasificacion {
         this.director = director;
     }
 
-
 }

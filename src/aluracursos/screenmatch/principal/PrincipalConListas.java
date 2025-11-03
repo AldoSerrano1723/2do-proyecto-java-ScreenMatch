@@ -5,12 +5,13 @@ import aluracursos.screenmatch.modelos.Serie;
 import aluracursos.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalConListas {
     public static void main(String[] args){
         Pelicula miPelicula = new Pelicula("Encanto", 2021);
         miPelicula.evalua(9);
-        Serie casaDragon = new Serie ("La cada del dragon", 2022);
+        Serie casaDragon = new Serie ("La casa del dragon", 2022);
         casaDragon.evalua(8);
         var otraPelicula = new Pelicula("Alien", 1979);
         otraPelicula.evalua(10);
@@ -27,6 +28,13 @@ public class PrincipalConListas {
                 System.out.println("La pelicual tiene " + pelicula.getClasificacion() + " Estrellas");
             }
         }
+
+        System.out.println("----------------------------------------------------------------------------");
+        System.out.println("Lista de titulos desordenada: " + lista);
+        System.out.println("----------------------------------------------------------------------------");
+        Collections.sort(lista);
+        System.out.println("Lista de titulos ordenada: " + lista);
+
 
 
     }
