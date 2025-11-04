@@ -6,6 +6,7 @@ import aluracursos.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class PrincipalConListas {
     public static void main(String[] args){
@@ -33,7 +34,11 @@ public class PrincipalConListas {
         System.out.println("Lista de titulos desordenada: " + lista);
         System.out.println("----------------------------------------------------------------------------");
         Collections.sort(lista);
-        System.out.println("Lista de titulos ordenada: " + lista);
+        System.out.println("Lista de titulos ordenada por alfabetico: " + lista);
+
+        System.out.println("----------------------------------------------------------------------------");
+        lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
+        System.out.println("Lista de titulos ordenada por fechas: " + lista);
 
 
 
