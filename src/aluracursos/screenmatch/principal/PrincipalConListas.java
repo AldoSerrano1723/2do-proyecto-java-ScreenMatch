@@ -39,8 +39,5 @@ public class PrincipalConListas {
         System.out.println("----------------------------------------------------------------------------");
         lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
         System.out.println("Lista de titulos ordenada por fechas: " + lista);
-
-
-
     }
 }
