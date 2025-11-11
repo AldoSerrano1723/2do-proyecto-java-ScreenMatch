@@ -1,14 +1,11 @@
 package aluracursos.screenmatch.modelos;
 
-import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo> {
 
     //ATRIBUTOS
 
-    @SerializedName("Title")
     private String nombre;
-    @SerializedName("Year")
     private int fechaDeLanzamiento;
     private int duracionMinutos;
     private boolean incluidoEnPlan;
@@ -21,6 +18,11 @@ public class Titulo implements Comparable<Titulo> {
         this.fechaDeLanzamiento = fechaDeLanzamiento;
     }
 
+    public Titulo(TituloOMDB tituloOMDB) {
+        this.nombre = tituloOMDB.title();
+        this.fechaDeLanzamiento = Integer.valueOf(tituloOMDB.year());
+        this.duracionMinutos = Integer.valueOf(tituloOMDB.runtime().substring(0, 2));
+    }
 
     //METODOS SET
 
@@ -70,7 +72,7 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString() {
-        return "Titulo: " + this.getNombre() + "(" + this.getFechaDeLanzamiento() + ")";
+        return "Titulo: " + this.getNombre() + "(" + this.getFechaDeLanzamiento() + ")" + " Duracion: " + this.duracionMinutos;
     }
 
     public void muestraFichaTecnica(){
