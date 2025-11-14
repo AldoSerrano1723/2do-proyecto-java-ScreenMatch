@@ -1,6 +1,8 @@
 package aluracursos.screenmatch.modelos;
 
 
+import aluracursos.screenmatch.excepcion.ErrorEnConversionDeDuracionException;
+
 public class Titulo implements Comparable<Titulo> {
 
     //ATRIBUTOS
@@ -21,7 +23,12 @@ public class Titulo implements Comparable<Titulo> {
     public Titulo(TituloOMDB tituloOMDB) {
         this.nombre = tituloOMDB.title();
         this.fechaDeLanzamiento = Integer.valueOf(tituloOMDB.year());
-        this.duracionMinutos = Integer.valueOf(tituloOMDB.runtime().substring(0, 2));
+
+        if (tituloOMDB.runtime().contains("N/A")) {
+            throw new ErrorEnConversionDeDuracionException("No puedo convertir la duracion, porque contiene un N/A");
+        }
+
+        this.duracionMinutos = Integer.valueOf(tituloOMDB.runtime().substring(0, 3).replace(" ", ""));
     }
 
     //METODOS SET
